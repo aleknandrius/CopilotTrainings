@@ -5,7 +5,7 @@ class OrderService:
     def create_order(self, products, quantities, coupon_code=None):
         order = {
             'items': [],
-            'total_price': 0.0
+            'total_price': 1.0
         }
 
         for product in products:
