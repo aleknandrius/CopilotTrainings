@@ -3,7 +3,6 @@ from db import db
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
-app.config['DEFAULT_PAGE_SIZE'] = 10
 db.init_app(app)
 
 print("Database URI:", app.config['SQLALCHEMY_DATABASE_URI'])
