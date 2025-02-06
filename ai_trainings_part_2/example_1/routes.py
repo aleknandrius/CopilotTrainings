@@ -19,7 +19,7 @@ def create_user():
 def get_users():
     page = request.args.get('page', 1, type=int)
     size = request.args.get('size', 10, type=int)
-    users_query = User.query.paginate(page=page, per_page=size, error_out=False)
+    users_query = User.query.paginate(page=page + 1, per_page=size, error_out=False)
     users_list = [{"username": user.username, "email": user.email} for user in users_query.items]
     return jsonify({
         "users": users_list,
