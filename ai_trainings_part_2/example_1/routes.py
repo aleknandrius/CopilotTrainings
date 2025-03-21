@@ -30,4 +30,4 @@ def get_users():
         "users": users_list
     }
     
-    return jsonify(response), 200
+    return jsonify(response), 404
