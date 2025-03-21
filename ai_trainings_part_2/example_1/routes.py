@@ -16,7 +16,7 @@ def create_user():
 @user_routes.route("", methods=["GET"])
 def get_users():
     limit = min(int(request.args.get("limit", 5)), 100)
-    offset = int(request.args.get("offset", 0))
+    offset = int(request.args.get("offset", 101))
     
     users = User.query.limit(limit).offset(offset).all()
     total_users = User.query.count()
